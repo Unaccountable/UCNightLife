@@ -1,0 +1,100 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+strong,
+span {
+  font-family: "Open Sans", sans-serif;
+}
+
+.nav-section {
+  width: 100%;
+}
+.nav-section .navbar-collapse {
+  justify-content: end;
+  dipslay: flex;
+}
+.nav-section .navbar {
+  padding: 10px 98px;
+}
+.nav-section .navbar .nav-item .nav-link {
+  color: black;
+  font-weight: 500;
+}
+.nav-section .navbar .nav-item .clrd {
+  color: #30b2d2;
+}
+
+.navbar-brand {
+  width: 50%;
+  height: auto;
+}
+
+.outer-section {
+  width: 100%;
+  background-color: whitesmoke;
+  min-height: 800px;
+}
+.outer-section .text-info {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.outer-section .text-info h3 {
+  color: black;
+}
+.outer-section .text-info p {
+  color: gray;
+}
+.outer-section .text-info h5 {
+  color: gray;
+  font-size: 16px;
+}
+.outer-section .text-info h5 strong {
+  color: black;
+}
+.outer-section .pic-section {
+  width: 50%;
+  background-color: #dedede;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.outer-section .pic-section .mdi {
+  color: black;
+}
+.outer-section .boxes-section {
+  width: 100%;
+}
+.outer-section .boxes-section .b0x-four {
+  width: 100%;
+  padding-top: 30px;
+}
+.outer-section .boxes-section .b0x-four .one-box {
+  background-color: #dedede;
+  min-height: 160px;
+}
+
+.footer {
+  width: 100%;
+  min-height: 300px;
+  background-color: black;
+  padding-top: 90px;
+}
+.footer h2 {
+  color: white;
+  font-size: 22px;
+  margin-left: 46px;
+}
+.footer ul {
+  color: white;
+}
+.footer ul li {
+  list-style: none;
+}
+.footer ul li a {
+  color: white;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
