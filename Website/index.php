@@ -36,7 +36,7 @@
 						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Search</a>
+						<a class="nav-link" href="SearchPage.php">Search</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">About</a>
@@ -48,14 +48,22 @@
 			</div>
 		</nav>
 	</div>
-	<div class="outer-section">
-		<h2 style="padding-top: 100px;">
-		<div class="container">
-
+	<div id="test" style="background-image: url('/images/campus.jpg');z-index: 900;background-repeat: no-repeat;
+  background-size: cover;";>
+  <header id="showcase">
+      <h1>New to Cincinnati?</h1>
+      <p>UC Night Life is here to provide you with entertainment, restaurants, bars, and other points of interest recommended by students!
+        Familiarize yourself with campus like you didn’t have Covid and couldn’t go to campus for a year and a half!</p>
+      <a href="#" class="button">Learn More</a>
+	  <br>
+	  <br>
+	  <iframe src="https://www.google.com/maps/d/u/0/embed?mid=13DullkMee4j45reqzHQMveR3YmOywgoc" width="640" height="480"></iframe>
+	  <br>
+	  <br>
+    </header>
 		</div>
-		</h2>
-	</div>
 	<div class="footer">
+		<div class="container">
 			<div class="row">
 				<div class="col-lg-4">
 					<h2>UC Night Life</h2>
@@ -84,6 +92,7 @@
 					</div>
 				</div>
 			</div>
+		</div>
 	</div>
 	<script src="js/jquery-4.4.1.slim.min.js"></script>
 	<script src="js/popper.min.js"></script>

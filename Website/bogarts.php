@@ -25,7 +25,7 @@
 <body>
 	<div class="nav-section">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="#"><img src="images/logo.png"></a>
+			<a class="navbar-brand" href="index.php"><img src="images/logo.png"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
 				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -33,10 +33,10 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav">
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Search</a>
+						<a class="nav-link" href="SearchPage.php">Search</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">About</a>
@@ -49,13 +49,64 @@
 		</nav>
 	</div>
 	<div class="outer-section">
-		<h2 style="padding-top: 100px;">
 		<div class="container">
+			<div class="text-info">
+				<h3> Bogart's:</h3>
+				<p> Bogart's is a music venue located in the Corryville neighborhood of Cincinnati, Ohio,
+					near the University of Cincinnati, across Vine Street from Sudsy Malone's Rock 'n Roll Laundry & Bar.
+					The venue opened as a vaudeville theater called the Nordland Plaza Nickelodeon in 1905.
+				</p>
+				<h5>
+					<strong> Address:</strong>
+					2621 Vine St, Cincinnati, OH 45219
+				</h5>
+				<h5>
+					<strong> Phone:</strong>
+					(513) 872-8801
+				</h5>
+				<h5>
+					<strong> Email:</strong>
+					BogartSite.Feedback@LiveNation.com
+				</h5>
+			</div>
+			<div class="pic-section">
+        <a-scene embedded>
+        <a-sky src="images/bogarts/bogarts1.jpg" rotation="0 -100 0">
+        </a-sky>
+    </a-scene>
+			</div>
 
+			<div class="boxes-section">
+				<div class="b0x-four">
+					<div class="row">
+						<div class="col-lg-3">
+							<div class="one-box">
+								<img src="images/Museum/MuseumFlat.jpg" style="width:260px;height:160px;">
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="one-box">
+								<img src="images/FishBowl/FishBowlFlat.jpg" style="width:260px;height:160px;">
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="one-box">
+								<img src="images/Aquarium/AquariumFlat.jpg" style="width:260px;height:160px;">
+							</div>
+						</div>
+                        <div class="col-lg-3">
+							<div class="one-box">
+								<img src="images/ArtMuseum/ArtMuseumFlat.jpg" style="width:260px;height:160px;">
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
 		</div>
-		</h2>
 	</div>
 	<div class="footer">
+		<div class="container">
 			<div class="row">
 				<div class="col-lg-4">
 					<h2>UC Night Life</h2>
@@ -84,6 +135,7 @@
 					</div>
 				</div>
 			</div>
+		</div>
 	</div>
 	<script src="js/jquery-4.4.1.slim.min.js"></script>
 	<script src="js/popper.min.js"></script>
