@@ -81,12 +81,12 @@
 					<div class="row">
 						<div class="col-lg-3">
 							<div class="one-box">
-								<img src="images/Museum/MuseumFlat.jpg" style="width:260px;height:160px;">
+								<img src="images/Museum/MuseumFlat.jpg" style="width:220px;height:160px;">
 							</div>
 						</div>
 						<div class="col-lg-3">
 							<div class="one-box">
-								<img src="images/FishBowl/FishBowlFlat.jpg" style="width:260px;height:160px;">
+								<img src="images/FishBowl/FishBowlFlat.jpg" style="width:220px;height:160px;">
 							</div>
 						</div>
 						<div class="col-lg-3">
@@ -96,7 +96,7 @@
 						</div>
                         <div class="col-lg-3">
 							<div class="one-box">
-								<img src="images/ArtMuseum/ArtMuseumFlat.jpg" style="width:260px;height:160px;">
+								<img src="images/ArtMuseum/ArtMuseumFlat.jpg" style="width:220px;height:160px;">
 							</div>
 						</div>
 
