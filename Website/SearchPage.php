@@ -35,6 +35,8 @@
 	<title>UC Night Life - Search</title>
 </head>
 
+
+
 <body>
 	<div class="nav-section">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -87,7 +89,7 @@
   });
 </script>
 
-
+<form method='post' action='bogarts.php' class='inline'>
 <?php
 
 //sql querry
@@ -119,10 +121,11 @@
 				echo $row['name'];
 				echo"</td>";
 				echo"<td>";
-				echo $row['intLinks'];
+				//echo $row['intLinks'];
+				echo"<button type=\"submit\" name=\"location\" value=\"",$row['name'],"\" class=\"link-button\">";
 				echo "Click here to learn more about ";
 				echo $row['name'];
-				echo "</a>";
+				//echo "</a>";
 				echo"</td>";
 				echo"</tr>";
 			}

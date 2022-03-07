@@ -1,3 +1,9 @@
+<?php
+	include 'includes/dbh.inc.php';
+	include 'includes/comments.inc.php';
+	date_default_timezone_set('America/New_York');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,10 +23,46 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 
-
-
 	<title>UC Night Life - Results</title>
+	
 </head>
+
+<?php
+
+
+			
+
+	$location = htmlspecialchars($_POST['location']);
+	
+	$descrip = '';
+	
+	$addr = '';
+	
+	$sql1 = "SELECT name,addr,lngDescrip FROM `locationdata` where name like '%".$location."%'";
+	
+	mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+	
+	$result1 = mysqli_query($conn, $sql1);
+							
+	if (mysqli_num_rows($result1)>0) {
+		
+		//
+		
+		while($row=mysqli_fetch_array($result1)) {
+
+			$addr = $row['addr'];
+			$lngDescrip = $row['lngDescrip'];
+			
+			
+			
+			
+		}
+	
+	}
+	
+	
+
+?>
 
 <body>
 	<div class="nav-section">
@@ -51,14 +93,13 @@
 	<div class="outer-section">
 		<div class="container">
 			<div class="text-info">
-				<h3> Bogart's:</h3>
-				<p> Bogart's is a music venue located in the Corryville neighborhood of Cincinnati, Ohio,
-					near the University of Cincinnati, across Vine Street from Sudsy Malone's Rock 'n Roll Laundry & Bar.
-					The venue opened as a vaudeville theater called the Nordland Plaza Nickelodeon in 1905.
+				<h3><?php echo $location; ?>:</h3>
+				<p> 
+					<?php echo $lngDescrip; ?>
 				</p>
 				<h5>
 					<strong> Address:</strong>
-					2621 Vine St, Cincinnati, OH 45219
+					<?php echo $addr; ?>
 				</h5>
 				<h5>
 					<strong> Phone:</strong>
@@ -75,31 +116,96 @@
         </a-sky>
     </a-scene>
 			</div>
+			
+			<?php
+						
+							
+							
+							//$test = [];
+							
+							
+						
+							//$result3 = mysqli_query($conn, $sql2);
+							
+							//if (mysqli_num_rows($result2)>0) {
+								
+								//while($row=mysqli_fetch_array($result2)) {
+
+									////echo $row['tags'];
+									
+									
+									////$test=$row['tags'];
+									
+								//}
+							
+							//}
+							
+							//implode(" ",$test);
+							
+							//$arr = (explode(",", $test));
+							
+							//$arr2 = [];
+							
+							//foreach($arr as &$value) {
+								
+								//$sql3 = "SELECT name FROM 'locationdata' where tags like '%".$value."%'";
+								
+								//$result3 = mysqli_query($conn, $sql3);
+							
+								//if (mysqli_num_rows($result3)>0) {
+									
+									//while($row=mysqli_fetch_array($result3)) {
+										
+										//array_push($arr2, $row['name']);
+									//}
+							
+								//}
+								
+							//}	
+							
+							//echo$arr2;
+								
+			?>
+			<?php
+				echo "<form method='POST' actions='".setComments($conn,$location)."'>
+				<input type='hidden' name='uid' value='Anonymous'></input>
+				<input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'></input>
+				<input type='hidden' name='location' value='".$location."'></input>
+				<textarea name='message'></textarea><br>
+				<button name='commentSubmit' type='submit'>Comment</button>
+				</form>";
+				
+				getComments($conn,$location);
+				
+			?>
 
 			<div class="boxes-section">
 				<div class="b0x-four">
 					<div class="row">
-						<div class="col-lg-3">
-							<div class="one-box">
-								<img src="images/Museum/MuseumFlat.jpg" style="width:260px;height:160px;">
+						
+						
+						
+							<div class="col-lg-3">
+								<div class="one-box">
+									<img src="images/Museum/MuseumFlat.jpg" style="width:260px;height:160px;">
+								</div>
 							</div>
-						</div>
-						<div class="col-lg-3">
-							<div class="one-box">
-								<img src="images/FishBowl/FishBowlFlat.jpg" style="width:260px;height:160px;">
+							<div class="col-lg-3">
+								<div class="one-box">
+									<img src="images/FishBowl/FishBowlFlat.jpg" style="width:260px;height:160px;">
+								</div>
 							</div>
-						</div>
-						<div class="col-lg-3">
-							<div class="one-box">
-								<img src="images/Aquarium/AquariumFlat.jpg" style="width:260px;height:160px;">
+							<div class="col-lg-3">
+								<div class="one-box">
+									<img src="images/Aquarium/AquariumFlat.jpg" style="width:260px;height:160px;">
+								</div>
 							</div>
-						</div>
-                        <div class="col-lg-3">
-							<div class="one-box">
-								<img src="images/ArtMuseum/ArtMuseumFlat.jpg" style="width:260px;height:160px;">
+							<div class="col-lg-3">
+								<div class="one-box">
+									<img src="images/ArtMuseum/ArtMuseumFlat.jpg" style="width:260px;height:160px;">
+								</div>
 							</div>
-						</div>
-
+						
 					</div>
 				</div>
 			</div>
