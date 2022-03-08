@@ -13,11 +13,17 @@
             <div class="form__message form__message--error"></div>
             <div class="form__input-group">
                 <input type="text" class="form__input" autofocus placeholder="Username or email" name="email">
-                <div class="form__input-error-message"></div>
+                
+                @error('email')
+                    <div class="form__input-error-message">{{$message}}</div>
+                @enderror
             </div>
             <div class="form__input-group">
                 <input type="password" class="form__input" autofocus placeholder="Password" name="password">
-                <div class="form__input-error-message"></div>
+                
+                @error('password')
+                    <div class="form__input-error-message">{{$message}}</div>
+                @enderror
             </div>
             <button class="form__button" type="submit">Login</button>
             <p class="form__text">
@@ -33,15 +39,24 @@
             <div class="form__message form__message--error"></div>
             <div class="form__input-group">
                 <input type="text" id="signupUsername" class="form__input" name="name" autofocus placeholder="Username">
-                <div class="form__input-error-message"></div>
+                
+                @error('name')
+                    <div class="form__input-error-message">{{$message}}</div>
+                @enderror
             </div>
             <div class="form__input-group">
                 <input type="text" class="form__input" autofocus placeholder="Email Address" name="email">
-                <div class="form__input-error-message"></div>
+                
+                @error('email')
+                    <div class="form__input-error-message">{{$message}}</div>
+                @enderror
             </div>
             <div class="form__input-group">
                 <input type="password" class="form__input" autofocus placeholder="Password" name="password">
-                <div class="form__input-error-message"></div>
+                
+                @error('password')
+                    <div class="form__input-error-message">{{$message}}</div>
+                @enderror
             </div>
             <div class="form__input-group">
                 <input type="password" class="form__input" autofocus placeholder="Confirm password" name="password_confirmation">
