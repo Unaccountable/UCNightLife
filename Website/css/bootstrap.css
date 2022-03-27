@@ -549,30 +549,6 @@ pre code {
   margin-left: auto;
 }
 
-.inline {
-  display: inline;
-}
-
-.link-button {
-  background: none;
-  border: none;
-  color: blue;
-  text-decoration: underline;
-  cursor: pointer;
-  font-size: 1em;
-  font-family: serif;
-}
-.link-button:focus {
-  outline: none;
-  border: none;
-  background: none;
-}
-.link-button:active {
-  color:red;
-  border: none;
-  background: none;
-}
-
 @media (min-width: 576px) {
   .container {
     max-width: 540px;

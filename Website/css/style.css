@@ -6,35 +6,47 @@ h5,
 p,
 strong,
 span {
-  font-family: "Open Sans", sans-serif;
+  font-family: "josefin_sansregular";
 }
 
 .nav-section {
   width: 100%;
+  background-color: #1b1b1b !important;
 }
+
+:first
+{
+  background: rgba(46, 46, 46, 0.7);
+}
+
 .nav-section .navbar-collapse {
   justify-content: end;
-  dipslay: flex;
+  display: flex;
+  background-color: #1b1b1b !important
 }
 .nav-section .navbar {
   padding: 10px 98px;
+  background-color: #1b1b1b !important
 }
 .nav-section .navbar .nav-item .nav-link {
-  color: black;
+  color: rgb(66, 66, 66);
   font-weight: 500;
+  background-color: #1b1b1b !important
 }
 .nav-section .navbar .nav-item .clrd {
-  color: #30b2d2;
+  color: #B89C00;
+  background-color: #1b1b1b !important
 }
 
 .navbar-brand {
   width: 50%;
   height: auto;
+  background-color: #1b1b1b !important
 }
 
 .outer-section {
   width: 100%;
-  background-color: whitesmoke;
+  background-color:#252424;
   min-height: 800px;
 }
 .outer-section .text-info {
@@ -61,6 +73,7 @@ span {
   height: 300px;
   margin-left: auto;
   margin-right: auto;
+  border:#B89C00 3px solid ;
 }
 .outer-section .pic-section .mdi {
   color: black;
@@ -79,14 +92,15 @@ span {
 
 .footer {
   width: 100%;
-  min-height: 300px;
-  background-color: black;
+  min-height: 200px;
+  background-color:#1b1b1b;
   padding-top: 90px;
 }
 .footer h2 {
   color: white;
   font-size: 22px;
   margin-left: 46px;
+  float: left;
 }
 .footer ul {
   color: white;
@@ -106,9 +120,14 @@ span {
 
 body{
   margin:0;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  /*font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;*/
   font-size:17px;
-  color:#926239;
+  /*background-color:#252424 !important;*/
+  background-image: url(../images/campus1.png) !important;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   line-height:1.6;
 }
 
@@ -128,27 +147,55 @@ body{
 #showcase h1{
   font-size:50px;
   line-height:1.2;
-  color:white;
-  background-color:hsla(6, 5%, 37%,.5);
+  color:#B89C00;
 }
 
 #showcase p{
   font-size:20px;
-  color:white;
-  background-color:hsla(6, 5%, 37%,.5);
+  color:#B89C00;
 }
 
 #showcase .button{
+  /*font-family: Arial;*/
   font-size:18px;
   text-decoration:none;
-  color:#E00122;
-  border:#E00122 1px solid;
+  color:#B89C00;
+  border:#B89C00 3px solid;
   padding:10px 20px;
-  border-radius:10px;
   margin-top:20px;
+  background-color: #252424;
 }
 
 #showcase .button:hover{
-  background:#E00122;
-  color:#fff;
+  background: rgb(49, 49, 49);
+  color:#B89C00;
+}
+
+/*--Online Font Not Working As Of Now*/
+
+/*@font-face
+{
+  font-family: 'josefin_sansregular';
+  src: url(Fonts\Josefinsans\JosefinSans-Regular.ttf')
+  font-weight: normal;
+  font-style: normal;
+
+}*/
+
+h1
+{
+  font-family:cambria;
+  font-size: 64px !important;
+  color:#B89C00;
+  text-align: center;
+  
+}
+
+p
+{
+  font-size: 24px !important;
+  font-style: italic;
+  font-family: Arial;
+  text-align: center;
+  color: #747474 !important;
 }

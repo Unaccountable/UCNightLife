@@ -35,8 +35,6 @@
 	<title>UC Night Life - Search</title>
 </head>
 
-
-
 <body>
 	<div class="nav-section">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -71,10 +69,11 @@
 		</h2>
 		
 <div class="container">
+    
 <form action="SearchPage.php" method="post">
   <div class="row">
      <h2>Search Here</h2>
-     <input type="text" name="search" id="search" placeholder="search here...." class="form-control">  
+     <input style="border: gray 3px solid ;" type="text" name="search" id="search" placeholder="search here...." class="form-control">  
   </div>
   </form>
 
@@ -89,7 +88,7 @@
   });
 </script>
 
-<form method='post' action='bogarts.php' class='inline'>
+
 <?php
 
 //sql querry
@@ -121,11 +120,10 @@
 				echo $row['name'];
 				echo"</td>";
 				echo"<td>";
-				//echo $row['intLinks'];
-				echo"<button type=\"submit\" name=\"location\" value=\"",$row['name'],"\" class=\"link-button\">";
+				echo $row['intLinks'];
 				echo "Click here to learn more about ";
 				echo $row['name'];
-				//echo "</a>";
+				echo "</a>";
 				echo"</td>";
 				echo"</tr>";
 			}
@@ -153,34 +151,27 @@
 ?>
 	</div>
 	<div class="footer">
+		<div class="container">
 			<div class="row">
 				<div class="col-lg-4">
-					<h2>UC Night Life</h2>
-					<ul class="mt-4">
+					<ul class="#">
 						<li><a href="#">@ 2021 All rights reserved</a></li>
 					</ul>
 				</div>
 				<div class="col-lg-4">
 					<ul class="#">
 						<li><a href="#">email@mail.uc.edu</a></li>
-						<li><a href="#">(123) 456-7890</a></li>
 					</ul>
 				</div>
 				<div class="col-lg-4">
 					<div class="d-flex">
 						<ul class="#">
-							<li><a href="#">Search</a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Contact</a></li>
-						</ul>
-						<ul class="#">
-							<li><a href="#">Facebook</a></li>
-							<li><a href="#">Instagram</a></li>
-							<li><a href="#">Twitter</a></li>
+							<li><a href="#">(123) 456-7890</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
+		</div>
 	</div>
 	<script src="js/jquery-4.4.1.slim.min.js"></script>
 	<script src="js/popper.min.js"></script>
